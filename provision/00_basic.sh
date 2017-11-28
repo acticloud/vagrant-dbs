@@ -2,4 +2,6 @@
 
 ## Install some basic packages
 
-apt-get update && apt-get -y install vim htop openjdk-8-jdk openjdk-8-jre
+apt-get update && apt-get -y install vim htop \
+                          openjdk-8-jdk openjdk-8-jre \
+                          python make gcc
