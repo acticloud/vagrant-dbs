@@ -8,8 +8,9 @@ set -e
 XENBRIDGE="virbr0"
 VMIP=""
 VMNAME="acticloud-dbs"
-VMMEM="2gb"
-VMVCPUS="2"
+VMMEM="8gb"
+VMVCPUS="4"
+VMDISKSIZE="100gb"
 VMROOTPASS="acticloud"
 ###################################
 
@@ -18,7 +19,7 @@ VMROOTPASS="acticloud"
 ## Create the image ##
 ######################
 echo "Creating image ..."
-xen-create-image --hostname=${VMNAME} --memory=${VMMEM} --vcpus=${VMVCPUS} \
+xen-create-image --hostname=${VMNAME} --memory=${VMMEM} --vcpus=${VMVCPUS} --size=${VMDISKSIZE} \
                  --bridge=${XENBRIDGE} \
                  --password=${VMROOTPASS} \
                  --dhcp --pygrub --noswap --dist=xenial
