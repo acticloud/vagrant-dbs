@@ -4,4 +4,4 @@
 
 apt-get update && apt-get -y install vim htop \
                           openjdk-8-jdk openjdk-8-jre \
-                          python make gcc
+                          python make gcc wget
